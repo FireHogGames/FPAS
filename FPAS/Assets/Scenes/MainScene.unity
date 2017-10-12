@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -86,7 +86,8 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: ad173088f6c73724a97c5fe2dea6b36a,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -540,7 +541,7 @@ Prefab:
         type: 2}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 1231505436}
+      objectReference: {fileID: 0}
     - target: {fileID: 114251932268851900, guid: d806a885e0f91824690eadb4e16826eb,
         type: 2}
       propertyPath: text
@@ -556,7 +557,23 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1117364390}
-    m_RemovedComponents: []
+    - target: {fileID: 114251932268851900, guid: d806a885e0f91824690eadb4e16826eb,
+        type: 2}
+      propertyPath: _animation
+      value: 
+      objectReference: {fileID: 1147289678}
+    - target: {fileID: 114251932268851900, guid: d806a885e0f91824690eadb4e16826eb,
+        type: 2}
+      propertyPath: idleAnimation
+      value: Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114251932268851900, guid: d806a885e0f91824690eadb4e16826eb,
+        type: 2}
+      propertyPath: shootAnimation
+      value: Shoot
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95227688555070874, guid: d806a885e0f91824690eadb4e16826eb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d806a885e0f91824690eadb4e16826eb, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1052693453 stripped
@@ -725,11 +742,27 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1117364388}
---- !u!95 &1231505436 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95227688555070874, guid: d806a885e0f91824690eadb4e16826eb,
+--- !u!1 &1147289677 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1045667028960258, guid: d806a885e0f91824690eadb4e16826eb,
     type: 2}
   m_PrefabInternal: {fileID: 944002645}
+--- !u!111 &1147289678
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147289677}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 715e4133ac2f9704789cbdda4044bb21, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 715e4133ac2f9704789cbdda4044bb21, type: 2}
+  - {fileID: 7400000, guid: a9cc8b93036ff15499618c817678d019, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1311015899
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,8 +918,8 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 800, y: 699}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
